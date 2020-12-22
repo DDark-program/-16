@@ -40,23 +40,29 @@ namespace Практ_16
             vector = 0;
         }
 
+        private void fon_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void Form1_KeyDown_1(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Left)
             {
-                vector = -3;
+                vector = -10;
             }
             if (e.KeyCode == Keys.Right)
             {
-                vector = 3;
+                vector = 10;
             }
         }
 
         private void timer1_Tick_1(object sender, EventArgs e)
         {
-            int fall_speed = 2;
+            int fall_speed = 8;
             water.Top = water.Top + fall_speed;
             boiler.Left = boiler.Left + vector;
+            //Если капля вышла за границы окна
             if (water.Top >= fon.Height)
             {
                 timer1.Enabled = false;
@@ -66,10 +72,13 @@ namespace Практ_16
                     timer1.Enabled = true;
                     Random r = new Random();
                     water.Top = -150;
-                    water.Left = r.Next(100, 700);
+                    water.Left = r.Next(10, 800);
+                    score=0;
+                    label2.Text = score.ToString();
                 }
                 else this.Close();
             }
+            //Если капля касается чана - добавляется очко и капля опять спавниться рандомно
             r1 = water.DisplayRectangle;r2 = boiler.DisplayRectangle;
             r1.Location = water.Location;r2.Location = boiler.Location;
             if (r1.IntersectsWith(r2))
@@ -78,13 +87,14 @@ namespace Практ_16
                 water.Top = -150;
                 water.Left = r.Next(100, 700);
                 score++;
-                label1.Text = score.ToString();
+                label2.Text = score.ToString();
             }
+            //Если чан за границами окна, то он перемещается к другому углу
             if (boiler.Location.X < 0)
             {
-                boiler.Location = new Point(900,boiler.Location.Y);
+                boiler.Location = new Point(815,boiler.Location.Y);
             }
-            if (boiler.Location.X > 900)
+            if (boiler.Location.X > 815)
             {
                 boiler.Location = new Point(0, boiler.Location.Y);
             }

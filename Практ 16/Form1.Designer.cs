@@ -35,6 +35,7 @@ namespace Практ_16
             this.label2 = new System.Windows.Forms.Label();
             this.water = new System.Windows.Forms.PictureBox();
             this.boiler = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.fon = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.water)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boiler)).BeginInit();
@@ -67,9 +68,9 @@ namespace Практ_16
             // water
             // 
             this.water.Image = global::Практ_16.Properties.Resources.water;
-            this.water.Location = new System.Drawing.Point(357, 136);
+            this.water.Location = new System.Drawing.Point(362, 133);
             this.water.Name = "water";
-            this.water.Size = new System.Drawing.Size(66, 76);
+            this.water.Size = new System.Drawing.Size(71, 74);
             this.water.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.water.TabIndex = 0;
             this.water.TabStop = false;
@@ -78,12 +79,20 @@ namespace Практ_16
             // 
             this.boiler.BackColor = System.Drawing.SystemColors.Window;
             this.boiler.Image = global::Практ_16.Properties.Resources.boiler1;
-            this.boiler.Location = new System.Drawing.Point(409, 367);
+            this.boiler.Location = new System.Drawing.Point(395, 367);
             this.boiler.Name = "boiler";
-            this.boiler.Size = new System.Drawing.Size(194, 189);
+            this.boiler.Size = new System.Drawing.Size(207, 201);
             this.boiler.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.boiler.TabIndex = 0;
             this.boiler.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(164, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 21);
+            this.label3.TabIndex = 2;
             // 
             // fon
             // 
@@ -95,6 +104,7 @@ namespace Практ_16
             this.fon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.fon.TabIndex = 0;
             this.fon.TabStop = false;
+            this.fon.Click += new System.EventHandler(this.fon_Click);
             // 
             // Form1
             // 
@@ -102,6 +112,7 @@ namespace Практ_16
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 568);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.water);
             this.Controls.Add(this.boiler);
@@ -111,7 +122,7 @@ namespace Практ_16
             this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Игра \"собери воду\"";
+            this.Text = "Игра \"Собери капли\"";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown_1);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp_1);
@@ -125,11 +136,12 @@ namespace Практ_16
 
         #endregion
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.PictureBox fon;
         private System.Windows.Forms.PictureBox boiler;
         private System.Windows.Forms.PictureBox water;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox fon;
     }
 }
 
