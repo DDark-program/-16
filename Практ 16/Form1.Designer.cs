@@ -33,9 +33,9 @@ namespace Практ_16
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.water = new System.Windows.Forms.PictureBox();
             this.boiler = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.fon = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.water)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boiler)).BeginInit();
@@ -65,6 +65,14 @@ namespace Практ_16
             this.label2.Size = new System.Drawing.Size(0, 21);
             this.label2.TabIndex = 2;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(164, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 21);
+            this.label3.TabIndex = 2;
+            // 
             // water
             // 
             this.water.Image = global::Практ_16.Properties.Resources.water;
@@ -85,14 +93,6 @@ namespace Практ_16
             this.boiler.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.boiler.TabIndex = 0;
             this.boiler.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(164, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 21);
-            this.label3.TabIndex = 2;
             // 
             // fon
             // 
@@ -119,9 +119,10 @@ namespace Практ_16
             this.Controls.Add(this.fon);
             this.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Игра \"Собери капли\"";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown_1);

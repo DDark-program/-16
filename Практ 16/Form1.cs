@@ -59,7 +59,7 @@ namespace Практ_16
 
         private void timer1_Tick_1(object sender, EventArgs e)
         {
-            int fall_speed = 8;
+            int fall_speed = 10;
             water.Top = water.Top + fall_speed;
             boiler.Left = boiler.Left + vector;
             //Если капля вышла за границы окна
