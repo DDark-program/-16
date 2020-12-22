@@ -83,6 +83,16 @@ namespace Практ_16.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fon {
+            get {
+                object obj = ResourceManager.GetObject("fon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap nicolas_appenzeller_cmc_clubhouse_by_tardifice_d97h0uq {
             get {
                 object obj = ResourceManager.GetObject("nicolas-appenzeller-cmc-clubhouse-by-tardifice-d97h0uq", resourceCulture);

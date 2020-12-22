@@ -12,13 +12,15 @@ namespace Практ_16
 {
     public partial class Form1 : Form
     {
-        int vector, score=0;
+        //Глобальные переменные
+        int vector, score;
         Rectangle r1, r2;
         public Form1()
         {
             InitializeComponent();
         }
 
+        //Основные параметры при открытии формы
         private void Form1_Load(object sender, EventArgs e)
         {
             this.Text = "Игра <Собери капли>";
@@ -31,20 +33,18 @@ namespace Практ_16
             Random r = new Random();
             water.Left = r.Next(100, 700);
             water.Top = -150;
-            score = 1;
+            score = 0;
             vector = 0;
+            label2.Text = score.ToString();
         }
 
+        //При отжатии клавиши движение прекращается
         private void Form1_KeyUp_1(object sender, KeyEventArgs e)
         {
             vector = 0;
         }
 
-        private void fon_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        //При нажатии клавиш просиходит движение в лево и вправо
         private void Form1_KeyDown_1(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Left)
@@ -72,9 +72,10 @@ namespace Практ_16
                     timer1.Enabled = true;
                     Random r = new Random();
                     water.Top = -150;
-                    water.Left = r.Next(10, 800);
+                    water.Left = r.Next(10, 700);
                     score=0;
                     label2.Text = score.ToString();
+                    boiler.Left = boiler.Left+0;
                 }
                 else this.Close();
             }
@@ -92,9 +93,9 @@ namespace Практ_16
             //Если чан за границами окна, то он перемещается к другому углу
             if (boiler.Location.X < 0)
             {
-                boiler.Location = new Point(815,boiler.Location.Y);
+                boiler.Location = new Point(710,boiler.Location.Y);
             }
-            if (boiler.Location.X > 815)
+            if (boiler.Location.X > 710)
             {
                 boiler.Location = new Point(0, boiler.Location.Y);
             }

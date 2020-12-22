@@ -51,7 +51,7 @@ namespace Практ_16
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(9, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(143, 21);
             this.label1.TabIndex = 2;
@@ -97,20 +97,19 @@ namespace Практ_16
             // fon
             // 
             this.fon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fon.Image = global::Практ_16.Properties.Resources.nicolas_appenzeller_cmc_clubhouse_by_tardifice_d97h0uq;
+            this.fon.Image = global::Практ_16.Properties.Resources.fon;
             this.fon.Location = new System.Drawing.Point(0, 0);
             this.fon.Name = "fon";
-            this.fon.Size = new System.Drawing.Size(1000, 568);
+            this.fon.Size = new System.Drawing.Size(922, 568);
             this.fon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.fon.TabIndex = 0;
             this.fon.TabStop = false;
-            this.fon.Click += new System.EventHandler(this.fon_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 568);
+            this.ClientSize = new System.Drawing.Size(922, 568);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
